@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import Characters from "./pages/Characters";
+import CharDetail from "./pages/CharDetail";
+import CreateGlobalStyle from "./styles/global";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <CreateGlobalStyle />
+      <Switch>
+        {/* <Redirect from="/page/1" to="/" />
+        <Route path="/page/:pageNumber" component={Characters} /> */}
+        <Route path="/" exact component={Characters} />
+        <Route path="/charDetail/:id" component={CharDetail} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
