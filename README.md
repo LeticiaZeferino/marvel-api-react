@@ -22,7 +22,6 @@ Responsive website that consumes Marvel API data listing, filtering and paging y
 </p>
 
 
-https://github.com/LeticiaZeferino/api-marvel-react/blob/main/avangers.png?raw=true
 ## :rocket: Tecnologias
 
 This project was developed with the following technologies:
